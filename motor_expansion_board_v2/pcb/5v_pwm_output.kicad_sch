@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "7729eda2-bcf5-453e-a889-864fd27f1fc4")
 	(paper "A4")
 	(lib_symbols
@@ -85,24 +85,6 @@
 				)
 			)
 			(symbol "74LVC1G125_1_1"
-				(pin input inverted
-					(at 0 10.16 270)
-					(length 7.62)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -15.24 0 0)
 					(length 7.62)
@@ -114,42 +96,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -5.08 -10.16 90)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin tri_state line
-					(at 12.7 0 180)
-					(length 7.62)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -175,11 +121,68 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at -5.08 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at 0 10.16 270)
+					(length 7.62)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin tri_state line
+					(at 12.7 0 180)
+					(length 7.62)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector:Conn_01x03_Pin"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -253,9 +256,42 @@
 				)
 			)
 			(symbol "Conn_01x03_Pin_1_1"
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(polyline
 					(pts
-						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+						(xy 1.27 2.54) (xy 0.8636 2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -279,7 +315,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 2.54) (xy 0.8636 2.54)
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -287,39 +323,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(rectangle
-					(start 0.8636 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 				(pin passive line
@@ -377,9 +380,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -452,7 +458,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -464,7 +470,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -513,9 +519,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -634,6 +643,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+5V"
 			(power)
@@ -711,7 +721,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -723,7 +733,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -737,7 +747,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+5V"
 						(effects
 							(font
@@ -754,6 +765,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -833,7 +845,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -850,7 +863,59 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "Logic Level Converter Block 2"
+		(exclude_from_sim no)
+		(at 57.15 78.74 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "01292854-19de-49ee-bb37-f3e79c973e23")
+	)
+	(text "NeoPixel RGB LED\nLevel Converter"
+		(exclude_from_sim no)
+		(at 121.92 24.13 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left bottom)
+		)
+		(uuid "18749308-9a51-4502-9270-cadd38e9faf1")
+	)
+	(text "5V PWM Output Interfaces"
+		(exclude_from_sim no)
+		(at 209.042 174.244 0)
+		(effects
+			(font
+				(size 3 3)
+			)
+		)
+		(uuid "39afcdeb-f3ae-4ff8-9095-5fd8a347f3d5")
+	)
+	(text "Logic Level Converter Block 1"
+		(exclude_from_sim no)
+		(at 58.42 22.86 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "3a503c48-3d61-47f6-a7bc-1777d0c81214")
+	)
+	(text "Logic Level Converter Block 3"
+		(exclude_from_sim no)
+		(at 60.96 142.24 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "b3452022-481c-42c2-aaac-898eeda7f6f6")
 	)
 	(junction
 		(at 54.61 119.38)
@@ -1433,57 +1498,6 @@
 			(type default)
 		)
 		(uuid "f4f9e064-638f-4c60-97b2-ef882e5375a9")
-	)
-	(text "Logic Level Converter Block 2"
-		(exclude_from_sim no)
-		(at 57.15 78.74 0)
-		(effects
-			(font
-				(size 2 2)
-			)
-		)
-		(uuid "01292854-19de-49ee-bb37-f3e79c973e23")
-	)
-	(text "NeoPixel RGB LED\nLevel Converter"
-		(exclude_from_sim no)
-		(at 121.92 24.13 0)
-		(effects
-			(font
-				(size 2 2)
-			)
-			(justify left bottom)
-		)
-		(uuid "18749308-9a51-4502-9270-cadd38e9faf1")
-	)
-	(text "5V PWM Output Interfaces"
-		(exclude_from_sim no)
-		(at 209.042 174.244 0)
-		(effects
-			(font
-				(size 3 3)
-			)
-		)
-		(uuid "39afcdeb-f3ae-4ff8-9095-5fd8a347f3d5")
-	)
-	(text "Logic Level Converter Block 1"
-		(exclude_from_sim no)
-		(at 58.42 22.86 0)
-		(effects
-			(font
-				(size 2 2)
-			)
-		)
-		(uuid "3a503c48-3d61-47f6-a7bc-1777d0c81214")
-	)
-	(text "Logic Level Converter Block 3"
-		(exclude_from_sim no)
-		(at 60.96 142.24 0)
-		(effects
-			(font
-				(size 2 2)
-			)
-		)
-		(uuid "b3452022-481c-42c2-aaac-898eeda7f6f6")
 	)
 	(global_label "LOGIC_OUT_2"
 		(shape input)
