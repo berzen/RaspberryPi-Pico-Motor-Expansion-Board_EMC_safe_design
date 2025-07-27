@@ -1,5 +1,5 @@
 power supply: 
-- 35mmx20mm instead of 55mmx22mm
+- 35mmx20mm instead of 55mmx22mm (43% reduction)
  - update of components:
     - ch224a vs ch224k (ch224k should be replaced regarding IC supplier)
     - 12pin USB vs 6pin USB (connection of USB lines - additional PD profiles possible)
