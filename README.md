@@ -3,6 +3,7 @@ power supply:
  - update of components:
     - ch224a vs ch224k (ch224k should be replaced regarding IC supplier)
     - 12pin USB vs 6pin USB (connection of USB lines - additional PD profiles possible)
+    - impedance controlled connection for DP, DN, CC1, CC2 lines (for JLCPCB 2 layer stackup)
     - 20V VBUS vs 12V VBUS (less current)
     - LMR51635 vs TPS5450 (smaller size, less additional components)
     - cost reduction of BOM costs
